@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Worknox | Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-glow: 0 0 6px #ffffff99, 0 0 12px #ffffff55;
+      --btn-glow: 0 0 10px #ffffffaa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background: #000;
+      background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+      z-index: -1;
+    }
+
+    .brand {
+      display: flex;
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .brand span {
+      opacity: 0;
+      transform: translateY(20px);
+      text-shadow: var(--text-glow);
+      animation: riseLetter 0.8s forwards ease-out;
+    }
+
+    .brand span:nth-child(1) { animation-delay: 0.1s; }
+    .brand span:nth-child(2) { animation-delay: 0.2s; }
+    .brand span:nth-child(3) { animation-delay: 0.3s; }
+    .brand span:nth-child(4) { animation-delay: 0.4s; }
+    .brand span:nth-child(5) { animation-delay: 0.5s; }
+    .brand span:nth-child(6) { animation-delay: 0.6s; }
+    .brand span:nth-child(7) { animation-delay: 0.7s; }
+
+    @keyframes riseLetter {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, p, .beta-line, .btn, footer {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      animation-delay: 1s;
+      text-shadow: var(--text-glow);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin: 10px auto;
+      max-width: 600px;
+      animation-delay: 1.4s;
+    }
+
+    .beta-line {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #eee;
+      font-style: italic;
+      animation-delay: 1.7s;
+      text-shadow: var(--text-glow);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s, background-color 0.3s;
+      animation-delay: 2s;
+      box-shadow: var(--btn-glow);
+      animation: fadeInUp 1s ease forwards 2s, blinkBtn 2s ease-in-out infinite;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    @keyframes blinkBtn {
+      0%, 100% {
+        box-shadow: 0 0 10px #ffffff55;
+        background-color: #ffffff;
+        color: #000;
+      }
+      50% {
+        box-shadow: 0 0 20px #ffffffcc;
+        background-color: #f4f4f4;
+        color: #111;
+      }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #777;
+      animation-delay: 2.4s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand {
+        font-size: 2.2rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <span>W</span><span>o</span><span>r</span><span>k</span><span>n</span><span>o</span><span>x</span>
+  </div>
+
+  <h1>🚀 Coming Soon</h1>
+  <p>We’re working hard to bring something amazing. Stay tuned!</p>
+  <div class="beta-line">Be our early beta tester and get access to something truly special 👀</div>
+  <a class="btn" href="https://forms.gle/BqLzLRJAvD4Bvzk8A" target="_blank">Get Benefit</a>
+
+  <footer>© 2025 | Worknox</footer>
+</body>
+</html>
