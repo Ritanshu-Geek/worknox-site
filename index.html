@@ -75,26 +75,23 @@
       font-size: 1rem;
       font-weight: 600;
       border-radius: 10px;
-      box-shadow: 0 0 20px 5px #00d9ff;
+      box-shadow: 0 0 8px #00d9ff;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      animation: glowPulse 2s infinite ease-in-out;
+      animation: subtlePulse 3s infinite ease-in-out;
     }
 
     .cta-button:hover {
       background: #00ffaa;
-      box-shadow: 0 0 25px 7px #00ffaa;
+      box-shadow: 0 0 10px #00ffaa;
     }
 
-    @keyframes glowPulse {
-      0% {
-        box-shadow: 0 0 15px 3px #00d9ff;
+    @keyframes subtlePulse {
+      0%, 100% {
+        box-shadow: 0 0 6px #00d9ff;
       }
       50% {
-        box-shadow: 0 0 25px 7px #00d9ff;
-      }
-      100% {
-        box-shadow: 0 0 15px 3px #00d9ff;
+        box-shadow: 0 0 10px #00d9ff;
       }
     }
 
